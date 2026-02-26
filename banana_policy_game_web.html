@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bananrama - Browser Edition</title>
+  <link rel="stylesheet" href="banana_policy_game_web.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-copy">
+      <h1>Bananrama: Standardfrukt Simulator (Browser Edition)</h1>
+      <p>Fånga, leverera och försvara bananen som organisationens bästa standardfrukt.</p>
+    </header>
+
+    <section class="game-frame" aria-label="Spelyta">
+      <canvas id="gameCanvas" width="1100" height="760" aria-label="Bananrama spelcanvas"></canvas>
+    </section>
+
+    <section class="help-panel" aria-label="Kontroller">
+      <div>
+        <strong>Kontroller:</strong>
+        <span>A/D eller pilar = flytta</span>
+        <span>1/2/3 = leverera till kontor</span>
+        <span>Space = leverera till mest behövande</span>
+        <span>R = rädda-banans</span>
+        <span>M = ljud av/på</span>
+      </div>
+      <div>
+        <strong>Tips:</strong>
+        <span>Öppna filen direkt i webbläsaren eller kör via lokal server.</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="banana_policy_game_web.js"></script>
+</body>
+</html>

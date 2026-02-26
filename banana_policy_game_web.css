@@ -1,0 +1,123 @@
+:root {
+  --bg-1: #efe6cb;
+  --bg-2: #d6c293;
+  --panel: #fff8e7;
+  --panel-border: #b98f4f;
+  --ink: #362715;
+  --muted: #695333;
+  --accent: #e5b81d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 8%, #f7f1db 0%, #f7f1db 18%, transparent 19%) 0 0 / 180px 180px,
+    radial-gradient(circle at 78% 18%, #e6d489 0%, #e6d489 20%, transparent 21%) 0 0 / 220px 220px,
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+}
+
+.app-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 14px 24px;
+}
+
+.top-copy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.top-copy h1 {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.top-copy p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.game-frame {
+  background: linear-gradient(180deg, #fff8df, #f4e6bc);
+  border: 3px solid #815f2b;
+  border-radius: 18px;
+  box-shadow:
+    0 14px 36px rgba(73, 50, 20, 0.2),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+  padding: 10px;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1100 / 760;
+  background: #f6efd8;
+  border-radius: 10px;
+  outline: none;
+}
+
+.help-panel {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+.help-panel > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+  background: var(--panel);
+  border: 2px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.help-panel strong {
+  font-weight: 800;
+}
+
+.help-panel span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 10px 8px 16px;
+  }
+
+  .game-frame {
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+  .help-panel {
+    gap: 8px;
+  }
+
+  .help-panel > div {
+    padding: 8px 10px;
+  }
+}
